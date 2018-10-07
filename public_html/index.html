@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Брендинговое агенство REALPRO</title>
+    <meta name="description" content="">
+    <meta name="title" content="Брендинговое агенство REALPRO">
+    <meta name="author" content="October CMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/realpro.png"/>
+	  <link href="style.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5X6R93');</script>
+    <!-- End Google Tag Manager -->
+
+<style>
+
+#dialog-overlay {
+
+	/* set it to fill the whil screen */
+	width:100%;
+	height:100%;
+
+	/* transparency for different browsers */
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	background:#000;
+
+	/* make sure it appear behind the dialog box but above everything else */
+	position:absolute;
+	top:0; left:0;
+	z-index:3000;
+
+	/* hide it by default */
+	display:none;
+}
+
+
+#dialog-box {
+
+	/* css3 drop shadow */
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+	/* css3 border radius */
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+
+	background:#eee;
+	/* styling of the dialog box, i have a fixed dimension for this demo */
+	width:328px;
+
+	/* make sure it has the highest z-index */
+	position:absolute;
+	z-index:5000;
+
+	/* hide it by default */
+	display:none;
+}
+
+#dialog-box .dialog-content {
+	/* style the content */
+	text-align:left;
+	padding:10px;
+	margin:13px;
+	color:#666;
+	font-family:arial;
+	font-size:12px;
+}
+
+a.buttonmsg {
+	/* styles for button */
+	margin:10px auto 0 auto;
+	text-align:center;
+	background-color: #e33100;
+	display: block;
+	width:50px;
+	padding: 5px 10px 6px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 1;
+
+	/* css3 implementation :) */
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+
+}
+
+a.buttonmsg:hover {
+	background-color: #c33100;
+}
+
+/* extra styling */
+#dialog-box .dialog-content p {
+	font-weight:700; margin:0;
+}
+
+#dialog-box .dialog-content ul {
+	margin:10px 0 10px 20px;
+	padding:0;
+	height:50px;
+}
+
+
+
+ #_form_9_ { font-size:14px; line-height:1.6; font-family:arial, helvetica, sans-serif; margin:0; }
+ #_form_9_ * { outline:0; }
+ ._form_hide { display:none; visibility:hidden; }
+ ._form_show { display:block; visibility:visible; }
+ #_form_9_._form-top { top:0; }
+ #_form_9_._form-bottom { bottom:0; }
+ #_form_9_._form-left { left:0; }
+ #_form_9_._form-right { right:0; }
+ #_form_9_ input[type="text"],#_form_9_ input[type="date"],#_form_9_ textarea { padding:6px; height:auto; border:#979797 1px solid; border-radius:4px; color:#000 !important; font-size:13px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
+ #_form_9_ textarea { resize:none; }
+ #_form_9_ ._submit { -webkit-appearance:none; cursor:pointer; font-family:arial, sans-serif; font-size:14px; text-align:center; background:#dc5131 !important; border:0 !important; -moz-border-radius:4px !important; -webkit-border-radius:4px !important; border-radius:4px !important; color:#eee !important; padding:8px !important; }
+ #_form_9_ ._close-icon { cursor:pointer; background-image:url('https://d226aj4ao1t61q.cloudfront.net/esfkyjh1u_forms-close-dark.png'); background-repeat:no-repeat; background-size:14.2px 14.2px; position:absolute; display:block; top:11px; right:9px; overflow:hidden; width:16.2px; height:16.2px; }
+ #_form_9_ ._close-icon:before { position:relative; }
+ #_form_9_ ._form-body { margin-bottom:30px; }
+ #_form_9_ ._form-image-left { width:150px; float:left; }
+ #_form_9_ ._form-content-right { margin-left:164px; }
+ #_form_9_ ._form-branding { color:#fff; font-size:10px; clear:both; text-align:left; margin-top:30px; font-weight:100; }
+ #_form_9_ ._form-branding ._logo { display:block; width:130px; height:14px; margin-top:6px; background-image:url('https://d226aj4ao1t61q.cloudfront.net/hh9ujqgv5_aclogo_li.png'); background-size:130px auto; background-repeat:no-repeat; }
+ #_form_9_ ._form-label,#_form_9_ ._form_element ._form-label { font-weight:bold; margin-bottom:5px; display:block; }
+ #_form_9_._dark ._form-branding { color:#333; }
+ #_form_9_._dark ._form-branding ._logo { background-image:url('https://d226aj4ao1t61q.cloudfront.net/jftq2c8s_aclogo_dk.png'); }
+ #_form_9_ ._form_element { position:relative; margin-bottom:10px; font-size:0; max-width:100%; }
+ #_form_9_ ._form_element * { font-size:14px; }
+ #_form_9_ ._form_element._clear { clear:both; width:100%; float:none; }
+ #_form_9_ ._form_element._clear:after { clear:left; }
+ #_form_9_ ._form_element input[type="text"],#_form_9_ ._form_element input[type="date"],#_form_9_ ._form_element select,#_form_9_ ._form_element textarea:not(.g-recaptcha-response) { display:block; width:100%; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
+ #_form_9_ ._field-wrapper { position:relative; }
+ #_form_9_ ._inline-style { float:left; }
+ #_form_9_ ._inline-style input[type="text"] { width:150px; }
+ #_form_9_ ._inline-style:not(._clear) + ._inline-style:not(._clear) { margin-left:20px; }
+ #_form_9_ ._form_element img._form-image { max-width:100%; }
+ #_form_9_ ._clear-element { clear:left; }
+ #_form_9_ ._full_width { width:100%; }
+ #_form_9_ ._form_full_field { display:block; width:100%; margin-bottom:10px; }
+ #_form_9_ input[type="text"]._has_error,#_form_9_ textarea._has_error { border:#f37c7b 1px solid; }
+ #_form_9_ input[type="checkbox"]._has_error { outline:#f37c7b 1px solid; }
+ #_form_9_ ._error { display:block; position:absolute; font-size:13px; z-index:10000001; }
+ #_form_9_ ._error._above { padding-bottom:4px; top:-41px; right:0; }
+ #_form_9_ ._error._below { padding-top:4px; top:100%; right:0; }
+ #_form_9_ ._error._above ._error-arrow { bottom:0; right:15px; border-left:5px solid transparent; border-right:5px solid transparent; border-top:5px solid #f37c7b; }
+ #_form_9_ ._error._below ._error-arrow { top:0; right:15px; border-left:5px solid transparent; border-right:5px solid transparent; border-bottom:5px solid #f37c7b; }
+ #_form_9_ ._error-inner { padding:8px 12px; background-color:#f37c7b; font-size:13px; font-family:arial, sans-serif; color:#fff; text-align:center; text-decoration:none; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; }
+ #_form_9_ ._error-inner._form_error { margin-bottom:5px; text-align:left; }
+ #_form_9_ ._button-wrapper ._error-inner._form_error { position:static; }
+ #_form_9_ ._error-inner._no_arrow { margin-bottom:10px; }
+ #_form_9_ ._error-arrow { position:absolute; width:0; height:0; }
+ #_form_9_ ._error-html { margin-bottom:10px; }
+ .pika-single { z-index:10000001 !important; }
+ @media all and (min-width:320px) and (max-width:667px) { ::-webkit-scrollbar { display:none; }
+ #_form_9_ { margin:0; width:100%; min-width:100%; max-width:100%; box-sizing:border-box; }
+ #_form_9_ * { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; font-size:1em; }
+ #_form_9_ ._form-content { margin:0; width:100%; }
+ #_form_9_ ._form-inner { display:block; min-width:100%; }
+ #_form_9_ ._form-title,#_form_9_ ._inline-style { margin-top:0; margin-right:0; margin-left:0; }
+ #_form_9_ ._form-title { font-size:1.2em; }
+ #_form_9_ ._form_element { margin:0 0 20px; padding:0; width:100%; }
+ #_form_9_ ._form-element,#_form_9_ ._inline-style,#_form_9_ input[type="text"],#_form_9_ label,#_form_9_ p,#_form_9_ textarea:not(.g-recaptcha-response) { float:none; display:block; width:100%; }
+ #_form_9_ ._row,#_form_9_ p,#_form_9_ label { margin-bottom:0.7em; width:100%; }
+ #_form_9_ ._row input[type="checkbox"],#_form_9_ ._row input[type="radio"] { margin:0 !important; vertical-align:middle !important; }
+ #_form_9_ ._row input[type="checkbox"] + span label { display:inline; }
+ #_form_9_ ._row span label { margin:0 !important; width:initial !important; vertical-align:middle !important; }
+ #_form_9_ ._form-image { max-width:100%; height:auto !important; }
+ #_form_9_ input[type="text"] { padding-left:10px; padding-right:10px; font-size:16px; line-height:1.3em; -webkit-appearance:none; }
+ #_form_9_ input[type="radio"],#_form_9_ input[type="checkbox"] { display:inline-block; width:1.3em; height:1.3em; font-size:1em; margin:0 0.3em 0 0; vertical-align:baseline; }
+ #_form_9_ button[type="submit"] { padding:20px; font-size:1.5em; }
+ #_form_9_ ._inline-style { margin:20px 0 0 !important; }
+ }
+ #_form_9_ { position:relative; text-align:left; margin:25px auto 0; padding:20px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; *zoom:1; background:#e8eaeb !important; border:0px solid #030303 !important; width:290px; -moz-border-radius:0px !important; -webkit-border-radius:0px !important; border-radius:0px !important; color:#423b46 !important; }
+ #_form_9_ ._form-title { font-size:22px; line-height:22px; font-weight:600; margin-bottom:0; }
+ #_form_9_:before,#_form_9_:after { content:" "; display:table; }
+ #_form_9_:after { clear:both; }
+ #_form_9_._inline-style { width:auto; display:inline-block; }
+ #_form_9_._inline-style input[type="text"],#_form_9_._inline-style input[type="date"] { padding:10px 12px; }
+ #_form_9_._inline-style button._inline-style { position:relative; top:27px; }
+ #_form_9_._inline-style p { margin:0; }
+ #_form_9_._inline-style ._button-wrapper { position:relative; margin:27px 12.5px 0 20px; }
+ #_form_9_ ._form-thank-you { position:relative; left:0; right:0; text-align:center; font-size:18px; }
+ @media all and (min-width:320px) and (max-width:667px) { #_form_9_._inline-form._inline-style ._inline-style._button-wrapper { margin-top:20px !important; margin-left:0 !important; }
+ }
+
+ #_form_9_._form_9 { padding:20px; background:#e8eaeb; margin-top:40px; }
+ #_form_9_ ._x22063165 ._form-title { font-size:16px; text-align:left; margin:0 0 20px; font-family:Verdana, Arial, sans-serif; line-height:1.3em; text-transform:uppercase; font-weight:normal; }
+ #_form_9_ ._submit { font-size:14px; width:auto; display:block; margin:30px auto 0px; font-family:"RobotoMedium"; }
+ #_form_9_ ._x15950643 label { color:#423b46; }
+ #_form_9_ ._x38528810 label { color:#423b46; }
+ #_form_9_ ._x04833583 label { color:#423b46; }
+
+
+ #_form_9_2 { font-size:14px; font-family:arial, helvetica, sans-serif; margin:0; }
+ #_form_9_2 * { outline:0; }
+ ._form_hide { display:none; visibility:hidden; }
+ ._form_show { display:block; visibility:visible; }
+ #_form_9_2 ._form-top { top:0; }
+ #_form_9_2 ._form-bottom { bottom:0; }
+ #_form_9_2 ._form-left { left:0; }
+ #_form_9_2 ._form-right { right:0; }
+ #_form_9_2 input[type="text"],#_form_9_2 input[type="date"],#_form_9_2 textarea, #_form_9_2 select { padding:6px; height:auto; border:#979797 1px solid; border-radius:4px; color:#000 !important; font-size:13px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
+ #_form_9_2 textarea { resize:none; }
+ #_form_9_2 ._submit { -webkit-appearance:none; cursor:pointer; font-family:arial, sans-serif; font-size:14px; text-align:center; background:#dc5131 !important; border:0 !important; -moz-border-radius:4px !important; -webkit-border-radius:4px !important; border-radius:4px !important; color:#eee !important; padding:8px !important; }
+ #_form_9_2 ._close-icon { cursor:pointer; background-image:url('https://d226aj4ao1t61q.cloudfront.net/esfkyjh1u_forms-close-dark.png'); background-repeat:no-repeat; background-size:14.2px 14.2px; position:absolute; display:block; top:11px; right:9px; overflow:hidden; width:16.2px; height:16.2px; }
+ #_form_9_2 ._close-icon:before { position:relative; }
+ #_form_9_2 ._form-body { margin-bottom:30px; }
+ #_form_9_2 ._form-image-left { width:150px; float:left; }
+ #_form_9_2 ._form-content-right { margin-left:164px; }
+ #_form_9_2 ._form-branding { color:#fff; font-size:10px; clear:both; text-align:left; margin-top:30px; font-weight:100; }
+ #_form_9_2 ._form-branding ._logo { display:block; width:130px; height:14px; margin-top:6px; background-image:url('https://d226aj4ao1t61q.cloudfront.net/hh9ujqgv5_aclogo_li.png'); background-size:130px auto; background-repeat:no-repeat; }
+ #_form_9_2 ._form-label,#_form_9_2 ._form_element ._form-label { font-weight:bold; margin-bottom:5px; display:block; }
+ #_form_9_2 ._dark ._form-branding { color:#333; }
+ #_form_9_2 ._dark ._form-branding ._logo { background-image:url('https://d226aj4ao1t61q.cloudfront.net/jftq2c8s_aclogo_dk.png'); }
+ #_form_9_2 ._form_element { position:relative; margin-bottom:0px; font-size:0; max-width:100%; }
+ #_form_9_2 ._form_element * { font-size:14px; }
+ #_form_9_2 ._form_element._clear { clear:both; width:100%; float:none; }
+ #_form_9_2 ._form_element._clear:after { clear:left; }
+ #_form_9_2 ._form_element input[type="text"],#_form_9_2 ._form_element input[type="date"],#_form_9_2 ._form_element select, #_form_9_2 ._form_element textarea:not(.g-recaptcha-response) { display:block; width:100%; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
+ #_form_9_2 ._field-wrapper { position:relative; }
+ #_form_9_2 ._inline-style { float:left; }
+ #_form_9_2 ._inline-style input[type="text"] { width:150px; }
+ #_form_9_2 ._inline-style:not(._clear) + ._inline-style:not(._clear) { margin-left:20px; }
+ #_form_9_2 ._form_element img._form-image { max-width:100%; }
+ #_form_9_2 ._clear-element { clear:left; }
+ #_form_9_2 ._full_width { width:100%; }
+ #_form_9_2 ._form_full_field { display:block; width:100%; margin-bottom:10px; }
+ #_form_9_2 input[type="text"]._has_error,#_form_9_2 textarea._has_error { border:#f37c7b 1px solid; }
+ #_form_9_2 input[type="checkbox"]._has_error { outline:#f37c7b 1px solid; }
+ #_form_9_2 ._error { display:block; position:absolute; font-size:13px; z-index:10000001; }
+ #_form_9_2 ._error._above { padding-bottom:4px; top:-41px; right:0; }
+ #_form_9_2 ._error._below { padding-top:4px; top:100%; right:0; }
+ #_form_9_2 ._error._above ._error-arrow { bottom:0; right:15px; border-left:5px solid transparent; border-right:5px solid transparent; border-top:5px solid #f37c7b; }
+ #_form_9_2 ._error._below ._error-arrow { top:0; right:15px; border-left:5px solid transparent; border-right:5px solid transparent; border-bottom:5px solid #f37c7b; }
+ #_form_9_2 ._error-inner { padding:8px 12px; background-color:#f37c7b; font-size:13px; font-family:arial, sans-serif; color:#fff; text-align:center; text-decoration:none; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; }
+ #_form_9_2 ._error-inner._form_error { margin-bottom:5px; text-align:left; }
+ #_form_9_2 ._button-wrapper ._error-inner._form_error { position:static; }
+ #_form_9_2 ._error-inner._no_arrow { margin-bottom:10px; }
+ #_form_9_2 ._error-arrow { position:absolute; width:0; height:0; }
+ #_form_9_2 ._error-html { margin-bottom:10px; }
+ .pika-single { z-index:10000001 !important; }
+ @media all and (min-width:320px) and (max-width:667px) { ::-webkit-scrollbar { display:none; }
+ #_form_9_2 { margin:0; width:100%; min-width:100%; max-width:100%; box-sizing:border-box; }
+ #_form_9_2 * { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; font-size:1em; }
+ #_form_9_2 ._form-content { margin:0; width:100%; }
+ #_form_9_2 ._form-inner { display:block; min-width:100%; }
+ #_form_9_2 ._form-title,#_form_9_2 ._inline-style { margin-top:0; margin-right:0; margin-left:0; }
+ #_form_9_2 ._form-title { font-size:1.2em; }
+ #_form_9_2 ._form_element { margin:0 0 20px; padding:0; width:100%; }
+ #_form_9_2 ._form-element,#_form_9_2 ._inline-style,#_form_9_2 input[type="text"],#_form_9_2 label,#_form_9_2 p,#_form_9_2 textarea:not(.g-recaptcha-response), #_form_9_2 select { float:none; display:block; width:100%; }
+ #_form_9_2 ._row,#_form_9_2 p,#_form_9_2 label { margin-bottom:0.7em; width:100%; }
+ #_form_9_2 ._row input[type="checkbox"],#_form_9_2 ._row input[type="radio"] { margin:0 !important; vertical-align:middle !important; }
+ #_form_9_2 ._row input[type="checkbox"] + span label { display:inline; }
+ #_form_9_2 ._row span label { margin:0 !important; width:initial !important; vertical-align:middle !important; }
+ #_form_9_2 ._form-image { max-width:100%; height:auto !important; }
+ #_form_9_2 input[type="text"], #_form_9_2 select { padding-left:10px; padding-right:10px; font-size:16px; line-height:1.3em; -webkit-appearance:none; }
+ #_form_9_2 input[type="radio"],#_form_9_2 input[type="checkbox"] { display:inline-block; width:1.3em; height:1.3em; font-size:1em; margin:0 0.3em 0 0; vertical-align:baseline; }
+ #_form_9_2 button[type="submit"] { padding:20px; font-size:1.5em; }
+ #_form_9_2 ._inline-style { margin:20px 0 0 !important; }
+ }
+ #_form_9_2 { position:relative; text-align:left; margin:25px auto 0; padding:20px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; *zoom:1; background:#e8eaeb !important; border:0px solid #030303 !important; -moz-border-radius:0px !important; -webkit-border-radius:0px !important; border-radius:0px !important; color:#423b46 !important; }
+ #_form_9_2 ._form-title { font-size:22px; line-height:22px; font-weight:600; margin-bottom:0; }
+ #_form_9_2 :before,#_form_9_2 :after { content:" "; display:table; }
+ #_form_9_2 :after { clear:both; }
+ #_form_9_2 ._inline-style { width:auto; display:inline-block; }
+ #_form_9_2 ._inline-style input[type="text"],#_form_9_2 ._inline-style input[type="date"] { padding:10px 12px; }
+ #_form_9_2 ._inline-style button._inline-style { position:relative; top:27px; }
+ #_form_9_2 ._inline-style p { margin:0; }
+ #_form_9_2 ._inline-style ._button-wrapper { position:relative; margin:27px 12.5px 0 20px; }
+ #_form_9_2 ._form-thank-you { position:relative; left:0; right:0; text-align:center; font-size:18px; }
+ @media all and (min-width:320px) and (max-width:667px) { #_form_9_2 ._inline-form._inline-style ._inline-style._button-wrapper { margin-top:20px !important; margin-left:0 !important; }
+ }
+
+ #_form_9_2 ._form_9 { padding:20px; background:#e8eaeb; margin-top:40px; }
+ #_form_9_2 ._x22063165 ._form-title { font-size:16px; text-align:left; margin:0 0 20px; font-family:Verdana, Arial, sans-serif; line-height:1.3em; text-transform:uppercase; font-weight:normal; }
+ #_form_9_2 ._submit { font-size:14px; width:auto; display:block; margin:30px auto 0px; font-family:"RobotoMedium"; }
+ #_form_9_2 ._x15950643 label { color:#423b46; }
+ #_form_9_2 ._x38528810 label { color:#423b46; }
+ #_form_9_2 ._x04833583 label { color:#423b46; }
+ @media (max-width: 767px) {
+section#layout-content div.full-text {
+        display: none;
+}
+} 
+</style>
+
+
+<script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+
+	// if user clicked on button, the overlay layer or the dialogbox, close the dialog
+	$('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {
+		$('#dialog-overlay, #dialog-box').hide();
+		return false;
+	});
+
+	// if user resize the window, call the same function again
+	// to make sure the overlay fills the screen and dialogbox aligned to center
+	$(window).resize(function () {
+
+		//only do it if the dialog box is not hidden
+		if (!$('#dialog-box').is(':hidden')) popup();
+	});
+
+
+});
+
+  function makePayment(amount, orderId, description, name, email, phone) {
+        var params = {
+            //Код терминала (обязательный параметр), выдается банком.
+            TerminalKey: "1496153598333",
+            //Сумма заказа в копейках (обязательный параметр)
+            Amount: amount,
+            //Номер заказа (если не передан, принудительно устанавливается timestamp)
+            OrderId: orderId,
+            //Описание заказа (не обязательный параметр)
+            Description: description,
+            //Дополнительные параметры платежа
+            DATA: "Email=" + email + "|Phone=" + phone + "|Name=" + name,
+            //Флаг открытия платежной формы во фрейме
+            Frame: true
+        };
+        doPay(params);
+    }
+</script>
+
+</head>
+
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X6R93"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Header -->
+<header id="layout-header" class="fixed">
+    <div class="container">
+        <div class="addr">Москва | 2-й Рощинский пр-д, д. 8 | БЦ «Серпуховской двор»</div>
+        <div class="phone">
+            <a href="skype:callrealpro" onclick="return kk('click_skype');">skype: callrealpro</a> | <a
+                href="tel:+7(495)643-90-53" onclick="return kk('click_phone');">+7 (495) 643-90-53</a></div>
+    </div>
+</header>
+
+<!-- Content -->
+<section id="layout-content">
+    <div class="container">
+      <article><h1>Как перезагрузить B2B-продажи в 2017 г.?</h1>
+<p>"Перезагрузка" продаж в 2017 г. просто необходима всем, кто занимается продажами на b2b-рынке:  коммерческие директора, руководители отделов продаж, владельцы небольших и средних компаний, ведущие специалисты отделов продаж и маркетологи.</p>
+<p>Последние годы времена сильно изменились. Сжался объем рынка, изменилось соотношение сегментов. Некоторые клиенты вообще исчезли. Старые выгоды перестали работать, возник переизбыток товарного предложения, который никому больше не нужен.</p>
+<p>При всем при этом, ваш отдел продаж продолжает работать по старым регламентам, скриптам, офферам, привлекая неплатежеспособных клиентов в старых рекламных каналах, реакивируя старую базу (где пациент скорее мертв).</p>
+
+<div class="full-text">
+<h3>Почему это произошло?</h3>
+<p><strong><big>■</big> </strong>Потребители “в кредит”. У банков исчезла возможность брать дешевые деньги на Западе и повсеместно выдавать потребительские (и не только) кредиты каждому первому. В итоге расходы населения в B2C секторе сильно снизились, что потянула за собой все компании, производящие товары народного потребления и оказывающие “модные услуги”.</p>
+<p><strong><big>■</big> </strong>Все те, кто в жирные годы разбогател на ресурсах и тратил ранее деньги практически бездумно, полностью изменили свое поведение, включив режим тотальной экономии.</p>
+</div>
+
+<div class="full-text">
+<h3>Что имеем в итоге:</h3>
+<p><strong><big>1.</big> </strong>Первые две группы и формировали постоянно растущий спрос на недвижимость, автомобили, развлечения, туризм и т.д. Все эти отрасли обеспечивали работой множество B2B-компаний, причем спрос зачастую превышал предложение и все росло как на дрожжах. <strong>Продажники в этих B2B-компаниях превратились в менеджеров по согласованию и оформлению сделок и практически забыли, что такое реальные продажи.</strong></p>
+<p><strong><big>2.</big> </strong>“Понижению” квалификации продажников активно способствовало повсеместное разрастание отделов маркетинга, которые занимались исключительно тем, что “осваивали”  постоянно растущие рекламные бюджеты, теперь эти <strong>рекламные бюджеты перестали приносить какой-либо значимый эффект.</strong></p>
+<p><strong><big>3.</big> </strong>Самые активные покупатели в прошлом превратились в самых злостных неплательщиков. Им теперь не до новых покупок. Не знают, как расплатиться за старые приобретения. <strong>Основная клиентская база “выпала”.</strong></p>
+<p><strong><big>4.</big> </strong>Поток покупателей резко уменьшился примерно в 4-5 раз. Для многих компаний нынешнее финансовое положение, или кризис, обернулось полным крахом и банкротством. Надо или закрываться, или полностью перестраиваться.<strong> А для этого отсутствуют финансы, а главное деловые навыки у персонала и управленческого, и сбытового.</strong></p>
+</div>
+
+<h3>Что нужно делать?</h3>
+
+<p>Необходимо провести перезагрузку продаж. Специально для малого и среднего бизнеса мы, на основании отчетов по диагностикам двадцати отделов продаж за 2016 -2017 года разработали обучающий Мастер-класс по перезагрузке.</p>
+<p>В данный мастер-класс вошло описание основных ошибок отделов продаж,  связанных, как с ситуацией в стране, так и с не высокими компетенциями персонала в области организации продаж. Кейсы и примеры, которые разбираются на тренинге – это ситуации из жизни реальных компаний с которыми работает “REALPRO”.</p>
+
+<h3 style="font-size:14px; font-weight:bold">Мастер-класс состоит из четырех частей:</h3>
+<p><strong><big>■</big> </strong>Негативные тенденции систем продаж, связанные с кризисной ситуацией в стране.<br>
+<strong><big>■</big> </strong>Часто встречающиеся ошибки в организации и обеспечении продаж.<br>
+<strong><big>■</big> </strong>Положительные моменты, предоставляемые нам кризисом.<br>
+<strong><big>■</big> </strong>Укрупненный алгоритм «Перезагрузки Продаж».</p>
+
+<h3 style="font-size:14px; font-weight:bold">Участники получат:</h3>
+<p><strong><big>■</big> </strong>Возможность сравнить свою ситуацию в продажах с реальными примерами.<br>
+<strong><big>■</big> </strong>Чек-лист для оценки собственных отделов продаж.<br>
+<strong><big>■</big> </strong>Опережающие механизмы корректировки существующих систем продаж.<br>
+<strong><big>■</big> </strong>Пошаговый план по «Перезагрузке» отдела продаж.</p>
+
+<h3>Кто будет проводить  мастер-класс?</h3>
+
+<p><strong>Андрей Климов</strong></p>
+<p>Партнер компании REALPRO Brand Consulting, est. 1997.</p>
+<p>Эксперт по продажам и маркетингу с 20 летним стажем. Бизнес-тренер. Бизнес-Консультант.</p>
+
+<div class="video-responsive">
+<iframe class="youtube-player" type="text/html" width="auto" height="auto" src="https://www.youtube.com/embed/tpH_uhsgwyQ" frameborder="0" allowfullscreen></iframe>
+<!--	<iframe width="auto" height="auto" src="https://www.youtube.com/embed/SjopUcICE7s" frameborder="0" allowfullscreen></iframe> -->
+</div>
+
+<p><strong>Основные компетенции:</strong> управление полным комплексом маркетинга, руководство продающими подразделениями.</p>
+<p>Степень MBA</p>
+<p>Профессиональный опыт:</p>
+<p>- Более 50 проектов по продвижению и постановке, улучшению продаж<br>
+- Более 10 лет в консалтинге<br>
+- Более 120 проведенных тренингов<br>
+- Автор 3 собственных методик
+</p>
+
+<h3>Сколько стоит  и где будет мастер-класс?</h3>
+<p>Мастер-класс состоится 13 июля в Москве, по адресу 2-й Рощинский пр-д, д. 8.</p>
+<p><strong>Стоимость участия в мастер-классе у нас символическая, всего 990 руб, так как у нас нет задачи на нем заработать.</strong><br><br>
+При этом ценность данного мастер-класса вы можете посчитать сами, умножив ваши текущие продажи (личные, групповые, всего отдела или всей компании) на 1,3. Именно 30% - это минимальный рост продаж у наших клиентов, который гарантирован при внедрении наших простых интрументов. <br> 
+
+</p>
+<p><strong>На нашем мастер-классе мы хотим видеть только реально заинтересованных в перезагрузке продаж, поэтому просим предварительно получить и посмотреть запись части мастер-класса, и оставить обратную связь.</strong></p>
+<form id="_form_9_2" class="_form _form_9 _inline-form  _dark" name="TinkoffPayForm" novalidate>
+  <div class="_form-content">
+    <div class="_form_element _x22063165 _full_width _clear" >
+      <div class="_form-title" style="font-weight:bold">Участвовать в мастер-классе и начать перезагрузку продаж</div>
+    </div>
+    <div class="_form_element _f0_pole _full_width " >
+      <label class="_form-label"> Ваше имя:* </label>
+      <div class="_field-wrapper">
+        <input type="text" name="fullname2" id="fullname2" placeholder="" required/>
+      </div>
+    </div>
+    <div class="_form_element _f0_pole _full_width " >
+      <label class="_form-label"> Email:* </label>
+      <div class="_field-wrapper">
+        <input type="text" name="email2" id="email2" placeholder="" required/>
+      </div>
+    </div>
+
+    <input class="tinkoffPayRow" type="hidden" placeholder="Сумма заказа" name="paySum" value="990">
+    <input class="tinkoffPayRow" type="hidden" placeholder="Номер заказа" name="payOrder">
+
+    <div id = "_f0_firma" class="_form_element _f0_pole _full_width " style="display:none" >
+      <label class="_form-label"> Юридическое лицо: </label>
+      <div class="_field-wrapper">
+        <input type="text" name="firma" id="firma" placeholder="" required/>
+      </div>
+    </div>
+    <div id = "_f0_inn" class="_form_element _f0_pole _full_width " style="display: none" >
+    	<table width="100%">
+        <tr>
+        <td style="padding-right:5px">
+      <label class="_form-label"> ИНН: </label>
+      <div class="_field-wrapper">
+        <input type="text" name="inn" id="inn" placeholder="" required/>
+      </div>
+      </td>
+      <td style="padding-left:5px">
+      <label class="_form-label"> Телефон: </label>
+      <div class="_field-wrapper">
+        <input type="text" name="phone" id="phone" placeholder="" required/>
+      </div>
+      </td>
+      </tr>
+      </table>
+    </div>
+    <div id = "_f0_adr" class="_form_element _f0_pole _full_width " style="display: none" >
+    	<table width="100%">
+        <tr>
+        <td style="padding-right:5px">
+      <label class="_form-label"> Индекс: </label>
+      <div class="_field-wrapper">
+        <input type="text" name="ind" id="ind" placeholder="" required/>
+      </div>
+      </td>
+      <td style="padding-left:5px">
+      <label class="_form-label"> Юридический адрес: </label>
+      <div class="_field-wrapper">
+        <input type="text" name="uadr" id="uadr" placeholder="" required/>
+      </div>
+      </td>
+      </tr>
+      </table>
+    </div>
+    <div class="_form_element _f0_select _full_width " >
+      <label class="_form-label"> Способ оплаты:* </label>
+      <div class="_field-wrapper">
+          <select name="select" id="select" onChange="changeVisibility(this.options[this.selectedIndex].value);">
+            <option value="1" selected>Оплата банковской картой</option>
+            <option value="2">Безналичная оплата</option>
+          </select>
+      </div>
+    </div>
+    <div class="_button-wrapper _full_width">
+      <input id="_form_9_submit2" class="_submit" type="button" onclick = "SendForm()" value = "Начать оплату картой">
+    </div>
+    <p style="font-size: 12px; text-align: center;">Все вопросы по оплате можно уточнить у Ольги Корсаковой по тел. 8 915 291 69 76</p>
+    <div class="_clear-element"></div>
+  </div>
+  <div class="_form-thank-you" style="display:none;"></div>
+</form>
+
+<p>&nbsp;</p>
+
+
+      </article>
+        <aside class="fixed">
+          <div class="logo"><img src="./images/logo.png"></div>
+            <form method="POST" action="" id="_form_9_" class="_form _form_9 _inline-form  _dark" novalidate>
+   <div class="_form-content">
+    <div class="_form_element _x22063165 _full_width _clear" >
+      <div class="_form-title" style="font-weight:bold">
+        Получить часть записи мастер-класса
+      </div>
+      <div class="_form-title" style="font-size:14px">
+ 
+      </div>
+    </div>
+    <div class="_form_element _x15950643 _full_width " >
+      <label class="_form-label">
+        Ваше имя:*
+      </label>
+      <div class="_field-wrapper">
+        <input type="text" name="fullname" id="fullname" placeholder="" required/>
+      </div>
+    </div>
+    <div class="_form_element _x38528810 _full_width " >
+      <label class="_form-label">
+        Email:*
+      </label>
+      <div class="_field-wrapper">
+        <input type="text" name="email" id="email" placeholder="" required/>
+      </div>
+    </div>
+    <div class="_form_element _x38528810 _full_width " >
+      <label class="_form-label">
+        Телефон:*
+      </label>
+      <div class="_field-wrapper">
+        <input type="text" name="phone1" id="phone1" placeholder="" required/>
+      </div>
+    </div>
+    <div class="_button-wrapper _full_width">
+      <input id="_form_9_submit" class="_submit" type="button"  onclick = "sendformmsg()" value = "Запросить запись">
+  </div>
+    <div class="_clear-element">
+    </div>
+  </div>
+  <div class="_form-thank-you" style="display:none;">
+  </div>
+            </form>
+            <p>Мы гарантируем 100% конфиденциальность ваших данных.</p>
+        </aside>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="layout-footer">
+    <div id="footer">
+    <div class="container">
+      <hr align="left" width="67%"/>
+        <p class="muted credit">&copy; 2017 REALPRO Branding &amp; Consulting</p>
+    </div>
+</div></footer>
+<script type="text/javascript" language="JavaScript">
+            function changeVisibility(cvalue){
+				if (cvalue == "2") {
+	                document.getElementById("_f0_firma").style.display = "block";
+	                document.getElementById("_f0_inn").style.display = "block";
+	                document.getElementById("_f0_adr").style.display = "block";
+	                document.getElementById("_form_9_submit2").value = "Запросить счет";
+				} else {
+	                document.getElementById("_f0_firma").style.display = "none";
+	                document.getElementById("_f0_inn").style.display = "none";
+	                document.getElementById("_f0_adr").style.display = "none";
+	                document.getElementById("_form_9_submit2").value = "Начать оплату картой";
+				}
+            }
+</script>
+
+<script type="text/javascript" language="JavaScript">
+  function SendForm() {
+  	if ($("#fullname2").val() == "") {
+		popup("Укажите Ваше имя.");
+  	} else {
+		if ($("#email2").val() == "") {
+			popup("Укажите Ваш E-Mail.");
+		} else {
+			var select_value = document.getElementById("select").options[document.getElementById("select").selectedIndex].value;
+            if (select_value == "1") {
+            	this.makePayment(document.TinkoffPayForm.paySum.value.replace(/,/ig,'.') * 100, document.TinkoffPayForm.payOrder.value, "" , document.TinkoffPayForm.fullname2.value, document.TinkoffPayForm.email2.value, "");
+				$("#fullname2").val("");
+				$("#email2").val("");
+				$("#firma").val("");
+				$("#inn").val("");
+				$("#phone").val("");
+				$("#ind").val("");
+				$("#uadr").val("");
+                                    //                        }
+			} else {
+				var form_data = $('#_form_9_2').serialize(); //собераем все данные из формы
+				$.ajax({
+					type: "POST", //Метод отправки
+					url: "sendemail2.php", //путь до php фаила отправителя
+					data: form_data,
+					success: function(msg) {
+                        dataLayer.push({'event': 'FormSubmitted', 'formName' : 'invoice'});
+						if (msg == "0") {
+							$("#fullname2").val("");
+							$("#email2").val("");
+							$("#firma").val("");
+							$("#inn").val("");
+							$("#phone").val("");
+							$("#ind").val("");
+							$("#uadr").val("");
+							popup("Спасибо за ваш запрос. Мы свяжемся с вами в течение суток.");
+						} else {
+				            popup("Ошибка отправки запроса!");
+						}
+                     }
+            	});
+            }
+       }
+    }
+  }
+
+</script>
+<script language="JavaScript" type="text/javascript">
+function sendformmsg(){
+  if ($("#fullname").val() == "") {
+	popup("Укажите Ваше имя.");
+  } else {
+	if ($("#email").val() == "") {
+		popup("Укажите Ваш E-Mail.");
+	} else {
+  if ($("#phone1").val() == "") {
+		popup("Укажите Ваш номер телефона.");
+	} else {
+    	var form_data = $('#_form_9_').serialize(); //собераем все данные из формы
+		$.ajax({
+			type: "POST", //Метод отправки
+        	url: "sendemail.php", //путь до php фаила отправителя
+        	data: form_data,
+        	success: function(msg) {
+                dataLayer.push({'event': 'FormSubmitted', 'formName' : 'booking'});
+				if (msg == "0") {
+	        		popup("Спасибо за ваш запрос. Мы свяжемся с вами в течение суток.");
+                	$("#fullname").val("");
+                	$("#email").val("");
+                  $("#phone1").val("");
+				} else {
+	            	popup("Ошибка отправки запроса!!!");
+				}
+			}
+    	});
+    }
+    }
+  }
+};
+
+function popup(message) {
+
+	// get the screen height and width
+	var maskHeight = $(document).height();
+	var maskWidth = $(window).width();
+
+	// calculate the values for center alignment
+	var dialogTop =  (($(window).height())/3) - ($('#dialog-box').height())+window.pageYOffset;
+	var dialogLeft = (maskWidth/2) - ($('#dialog-box').width()/2);
+
+	// assign values to the overlay and dialog box
+	$('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
+	$('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
+
+	// display the message
+	$('#dialog-message').html(message);
+
+}
+
+</script>
+
+<div id="dialog-overlay"></div>
+<div id="dialog-box">
+	<div class="dialog-content">
+		<div id="dialog-message"></div>
+		<a href="#" class="buttonmsg">Закрыть</a>
+	</div>
+</div>
+
+</body>
+</html>
